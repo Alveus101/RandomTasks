@@ -12,13 +12,20 @@ int main() {
 		return 0;
 	}
 
-	if (brojZnamenki == 6) 
+	if (brojZnamenki == 6)
 		scanf("%6d", &binarniBroj);
 	else if (brojZnamenki == 8)
 		scanf("%8d", &binarniBroj);
-	
+
 	while (binarniBroj > 0) {
+		
 		ostatak = binarniBroj % 10;
+		
+		if (ostatak != 0 && ostatak != 1) {
+			printf("Binarne znamenke su samo 0 i 1");
+			return 0;
+		}
+		
 		decimalniBroj += ostatak * potencija;
 		binarniBroj /= 10;
 		potencija *= 2;
