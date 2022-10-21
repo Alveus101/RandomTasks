@@ -1,2 +1,2 @@
-# TVZ
-Zadaci s faksa
+# Random Tasks
+
