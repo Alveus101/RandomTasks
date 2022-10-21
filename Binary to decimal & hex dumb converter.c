@@ -3,7 +3,7 @@
 
 int main() {
 
-	int brojZnamenki, binarniBroj, decimalniBroj = 0, ostatak, potencija = 1;
+	int brojZnamenki, binarniBroj, decimalniBroj = 0, ostatak, error = 0;
 
 	scanf("%d", &brojZnamenki);
 
@@ -12,19 +12,114 @@ int main() {
 		return 0;
 	}
 
-	if (brojZnamenki == 6) 
+	if (brojZnamenki == 6) {
+		
 		scanf("%6d", &binarniBroj);
-	else if (brojZnamenki == 8)
-		scanf("%8d", &binarniBroj);
-	
-	while (binarniBroj > 0) {
-		ostatak = binarniBroj % 10;
-		decimalniBroj += ostatak * potencija;
-		binarniBroj /= 10;
-		potencija *= 2;
-	}
 
-	printf("\nDecimalno: %d\nOktalno: %o\nHex: %x\n", decimalniBroj, decimalniBroj, decimalniBroj);
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 1;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2 * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2 * 2 * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		if (error == 1) {
+			printf("Binarne znamenke su samo 0 i 1");
+			return 0;
+		}
+
+		printf("\nDecimalno: %d\nOktalno: %o\nHex: %x\n", decimalniBroj, decimalniBroj, decimalniBroj);
+	}
+	else if (brojZnamenki == 8) {
+		
+		scanf("%8d", &binarniBroj);
+
+		binarniBroj = binarniBroj;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 1;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2 * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2 * 2 * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2 * 2 * 2 * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		ostatak = binarniBroj % 10;
+		decimalniBroj += ostatak * 2 * 2 * 2 * 2 * 2 * 2 * 2;
+		binarniBroj = binarniBroj / 10;
+
+		if (ostatak != 0 && ostatak != 1) error = 1;
+
+		if (error == 1) {
+			printf("Binarne znamenke su samo 0 i 1");
+			return 0;
+		}
+
+		printf("\nDecimalno: %d\nOktalno: %o\nHex: %x\n", decimalniBroj, decimalniBroj, decimalniBroj);
+	}
 
 	return 0;
 }
