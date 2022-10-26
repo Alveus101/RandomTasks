@@ -13,7 +13,7 @@ int main() {
     while (broj != 0) {
         scanf("%d", &broj);
 
-        if (broj < 1) {
+        if (broj < 0) {
             printf("%d nije prirodni broj!", broj);
             return 0;
         }
