@@ -14,6 +14,12 @@ int main() {
     for (int i = 1; i <= kolicina; i++) {
         scanf("%d", &broj );
         
+        if (i == 1) {
+            min = broj;
+            max = broj;
+            minPlace = i;
+            maxPlace = i;
+        }
         if (broj > max) {
             max = broj;
             maxPlace = i;
