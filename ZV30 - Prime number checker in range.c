@@ -7,20 +7,23 @@ Napiši program koji će ispisati sve proste brojeve od 2-N.
 
 int main() {
 
-	int n;
+	int n, found = 0;
 
 	scanf("%d", &n);
-	
-	for (int i = 2; i < n; i++) {
-		for (int j = 2; j < i; j++) {
-			if (i % j == 0) {
-				break;
+
+	for (int j = 2; j <= n; j++) {
+		for (int i = 2; i < j; i++) {
+			if (j % i == 0) {
+				found = 1;
 			}
 			else {
-				printf("%d\n", i);
-				break;
+				continue;
 			}
 		}
+		if (found == 1) {
+			found = 0;
+		}
+		else printf("%d, ", j);
 	}
 	
 	return 0;
