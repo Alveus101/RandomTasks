@@ -4,7 +4,7 @@ p[100] sadrže tu vrijednost. Prethodno je potrebno učitati elemente polja p.
 */
 
 #define _CRT_SECURE_NO_WARNINGS
-#define MAX 10
+#define MAX 100
 #include <stdio.h>
 
 int main()
