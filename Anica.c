@@ -48,7 +48,7 @@ int main() {
 		printf("X %d\n", rezultati[i]);
 	}
 
-	for( i = brojRezultata - y; i > x; i--){
+	for (i = brojRezultata - y; i > x; i--) {
 		printf("%d\n", rezultati[i-1]);
 	}
 
