@@ -4,7 +4,7 @@ Napiši program koji unosi maksimalno 10 znakovnih nizova maksimalne duljine
 */
 
 #define _CRT_SECURE_NO_WARNINGS
-#define MAX_STRINGOVA 3
+#define MAX_STRINGOVA 10
 #define MAX_ZNAKOVA 100
 #include <stdio.h>
 
