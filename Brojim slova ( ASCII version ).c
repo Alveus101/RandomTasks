@@ -13,7 +13,7 @@ Najvise je bilo slova a.*/
 int main() {
 	
 	char unos = 0;
-	int kolicinaSlova[MAX_ASCII]{};
+	int kolicinaSlova[MAX_ASCII]{}, indexNajSlova = 0;
 
 	do {
 		scanf("%c", &unos);
@@ -30,7 +30,12 @@ int main() {
 		if (kolicinaSlova[i] != 0 && i != 10) {
 			printf("%c: %d\n", i, kolicinaSlova[i]);
 		}
+		if (kolicinaSlova[i] > kolicinaSlova[indexNajSlova] && i != 10) {
+			indexNajSlova = i;
+		}
 	}
+
+	printf("Najvise je bilo slova %c.", (char)indexNajSlova);
 
 	return 0;
 }
