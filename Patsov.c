@@ -12,11 +12,11 @@
 #define PROLAZ				'.'
 #define HRANA				'h'
 #define PREPREKA			'x'
-#define PUT_HORIZONTALNO	'-'
-#define PUT_VERTIKALNO		'|'
-#define PUT_SKRETANJE		'+'
+#define PUT_HORIZONTALNO		'-'
+#define PUT_VERTIKALNO			'|'
+#define PUT_SKRETANJE			'+'
 #define UKOP				'*'
-#define RUB					-52
+#define RUB				-52
 
 #include <stdio.h>
 #include <stdlib.h>
