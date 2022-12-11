@@ -169,27 +169,24 @@ int korakNaprijed(char matrica[MAX_R][MAX_S], int* lokacija, int* psmjer) {
 
 int main() {
 
-
-	int redci, stupci, smjer = DESNO, mozeDalje = TRUE;
+	int redovi, stupci, smjer = DESNO, mozeDalje = TRUE;
+	int* psmjer = &smjer;
+	int* lokacija = NULL;
+	lokacija = (int*)calloc(2, sizeof(int));
 	char matrica[MAX_R][MAX_S];
 
-	scanf("%d", &redci);
+	scanf("%d", &redovi);
 	scanf("%d", &stupci);
 
-	for (int red = 0; red < redci; red++) {
+	for (int red = 0; red < redovi; red++) {
 		for (int stupac = 0; stupac < stupci; stupac++)
 			scanf(" %c", &matrica[red][stupac]);
 	}
 
-	int* psmjer = &smjer;
-	int* lokacija = NULL;
-	lokacija = (int*)calloc(2, sizeof(int));
-
-	while (mozeDalje) {
+	while (mozeDalje)
 		mozeDalje = korakNaprijed(matrica, lokacija, psmjer);
-	}
 
-	for (int red = 0; red < redci; red++) {
+	for (int red = 0; red < redovi; red++) {
 		for (int stupac = 0; stupac < stupci; stupac++)
 			printf("%c", matrica[red][stupac]);
 		printf("\n");
