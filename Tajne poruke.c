@@ -47,7 +47,7 @@ int main() {
 
 		brojPoruka++;
 
-		if (strstr(poruka, "idem") != NULL || strstr(poruka, "spat") != NULL)
+		if (strstr(poruka, "idem") != NULL && strstr(poruka, "spat") != NULL)
 			break;
 	}
 
