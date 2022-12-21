@@ -23,20 +23,18 @@ Test caseovi su dolje.
 #include <stdio.h>
 #include <string.h>
 
-void dekodirajPoruku(char* kljuc, char* poruka, char* pdekodiranaPoruka) {
+void dekodirajPoruku(char* kljuc, char* poruka) {
 	for (int i = 0; i < strlen(poruka); i++) {
 		for (int j = 0; j < MAX_KLJUC; j++) {
-			if (poruka[i] == kljuc[j]) pdekodiranaPoruka[i] = (char)j+97;
-			else if (poruka[i] == '|') pdekodiranaPoruka[i] = ' ';
-			else if (poruka[i] >= '0' && poruka[i] <= '9') pdekodiranaPoruka[i] = poruka[i];
+			if (poruka[i] == kljuc[j]) poruka[i] = (char)j+97;
+			else if (poruka[i] == '|') poruka[i] = ' ';
+			else if (poruka[i] >= '0' && poruka[i] <= '9') poruka[i] = poruka[i];
 		}
 	}
-	pdekodiranaPoruka[strlen(poruka)] = '\0';
 }
 
 int main() {
-	char kljuc[MAX_KLJUC+1], poruka[MAX_ZNAKOVA], dekodiranaPoruka[MAX_ZNAKOVA];
-	char* pdekodiranaPoruka = dekodiranaPoruka;
+	char kljuc[MAX_KLJUC + 1], poruka[MAX_ZNAKOVA];
 	int brojPoruka = 0;
 
 	scanf("%[^\n]s", kljuc);
@@ -44,19 +42,17 @@ int main() {
 	while (1) {
 		scanf("\n%[^\n]s", poruka);
 
-		dekodirajPoruku(kljuc, poruka, pdekodiranaPoruka);
+		dekodirajPoruku(kljuc, poruka);
 
-		printf("%s\n", dekodiranaPoruka);
+		printf("%s\n", poruka);
 
 		brojPoruka++;
 
-		if (strstr(pdekodiranaPoruka, "idem") != NULL || strstr(pdekodiranaPoruka, "spat") != NULL) {
+		if (strstr(poruka, "idem") != NULL || strstr(poruka, "spat") != NULL)
 			break;
-		}
 	}
 
 	printf("Broj poruka: %d", brojPoruka);
-
 	return 0;
 }
 /*
