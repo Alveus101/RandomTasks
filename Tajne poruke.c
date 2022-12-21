@@ -28,7 +28,6 @@ void dekodirajPoruku(char* kljuc, char* poruka) {
 		for (int j = 0; j < MAX_KLJUC; j++) {
 			if (poruka[i] == kljuc[j]) poruka[i] = (char)j+97;
 			else if (poruka[i] == '|') poruka[i] = ' ';
-			else if (poruka[i] >= '0' && poruka[i] <= '9') poruka[i] = poruka[i];
 		}
 	}
 }
