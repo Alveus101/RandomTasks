@@ -7,7 +7,7 @@
 int main() {
 	FILE* file = NULL;
 	char chr = ' ', recenica[MAX_RECENICA][MAX_ZNAKOVA];
-	int r = 0, znak = 0, najvecaRecenica = 0;
+	int r = 0, znak = 0, najduljaRecenica = 0;
 
 	file = fopen("text.txt", "r");
 
@@ -31,11 +31,11 @@ int main() {
 	}
 	
 	for (int i = 0; i < r; i++) {
-		if (strlen(recenica[i]) > strlen(recenica[najvecaRecenica]))
-			najvecaRecenica = i;
+		if (strlen(recenica[i]) > strlen(recenica[najduljaRecenica]))
+			najduljaRecenica = i;
 	}
 
-	printf("%s", recenica[najvecaRecenica]);
+	printf("%s", recenica[najduljaRecenica]);
 	fclose(file);
 
 	return 0;
