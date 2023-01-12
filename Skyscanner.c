@@ -1,3 +1,8 @@
+/*
+Zadatak: https://imgur.com/a/a1RuLeS
+letovi.txt download: https://github.com/Alveus101/RandomTasks/blob/main/Other/letovi.txt
+*/
+
 #define _CRT_SECURE_NO_WARNINGS
 #define MAX_INPUT 4+1
 #define MAX_LETOVA 2000
