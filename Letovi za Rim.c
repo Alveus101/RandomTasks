@@ -60,7 +60,7 @@ char* formatTime(char* time, int hour, int min) {
 int main() {
 
 	FILE* file = NULL;
-	let ucitano, l[MAX_LETOVA] = { "","", 0, 0, 0.0 };
+	let l[MAX_LETOVA] = { "","", 0, 0, 0.0 };
 	char time[6] = "", najranijiTime[6] = "", najkasnijiTime[6] = "";
 	int i = 0, cntRead = 1, brojLetova = 0, najranijiLet = 0, najkasnijiLet = 0;
 
@@ -69,8 +69,7 @@ int main() {
 	file = fopen("Letovi.dat", "rb");
 
 	while (cntRead == 1) {
-		cntRead = fread(&ucitano, sizeof(let), 1, file);
-		l[i] = ucitano;
+		cntRead = fread(&l[i], sizeof(let), 1, file);
 		i++;
 	}
 
