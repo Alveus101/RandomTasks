@@ -1,0 +1,11 @@
+Hrvatska Zagreb 790017 641 1
+Hrvatska Split 178102 79.38 0
+JAR Johannesburg 957441 334.81 0
+Hrvatska Rijeka 128624 44 0
+JAR Pretoria 741651 687.54 1
+Slovenija Maribor 114487 140 0
+JAR Durban 595061 225.91 0
+JAR Stellenbosch 77476 21.5 0
+JAR Gansbaai 11598 12.44 0
+Hrvatska Osijek 108048 169 0
+Slovenija Ljubljana 282994 163.8 1
