@@ -39,8 +39,7 @@ int zbroji(char recenica[MAX_RECENICA], char* najveca) {
 }
 
 int main() {
-	char recenica[MAX_RECENICA];
-	char najvecaRijec[MAX_RIJEC];
+	char recenica[MAX_RECENICA], najvecaRijec[MAX_RIJEC];
 	
 	scanf("%[^\n]", recenica);
 
